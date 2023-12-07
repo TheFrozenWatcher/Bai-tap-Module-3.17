@@ -1,19 +1,24 @@
-const users = [];
-const handleAddValue = (value, arr) => {
-    arr.push(value)
-};
-const loadData = () => {
-    console.log(names);
-};
+function submitForm() {
+    // Get form elements
+    var name = document.getElementById('name').value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var email = document.getElementById('email').value;
+    var dob = document.getElementById('DOB').value;
+    var password = document.getElementById('password').value;
+    var classroom = document.getElementById('class').value;
+    var address = document.querySelector('.address input').value;
 
-let inputName = document.querySelectorAll("#name");
-console.log(inputName);
-let btnSignUp = document.querySelector("#btnSignUp");
-// const createUser = ()=>{
-//     const userName =
-// } 
+    // Create an object to store form data
+    var formData = {
+        name: name,
+        gender: gender,
+        email: email,
+        dob: dob,
+        password: password,
+        classroom: classroom,
+        address: address
+    };
 
-btnSignUp.addEventListener(`click`, () => {
-    const i;
-    loadData();
-})
+    // Log the form data to the console
+    console.log(formData);
+}
