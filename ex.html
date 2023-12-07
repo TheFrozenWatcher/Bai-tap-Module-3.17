@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./ex.css" />
+  </head>
+  <body>
+    <form class="form" id="form">
+      <h1>Thêm mới tài khoản</h1>
+      <div class="container">
+        <div class="input-name input-area">
+          <label for="name">Tên</label>
+          <input type="text" id="name" class="name input-bar" />
+        </div>
+        <div class="input-gender input-area">
+          <label for="gender">Giới tính</label>
+          <div class="choose-gender input-bar">
+            <input type="radio" name="gender" value="Nam" id="gender" />Nam
+            <input type="radio" name="gender" value="Nữ" id="gender" /> Nữ
+            <input type="radio" name="gender" value="Khác" id="gender" />Khác
+          </div>
+        </div>
+        <div class="break"></div>
+        <div class="input-email input-area">
+          <label for="email">Email</label>
+          <input type="text" class="input-bar" id="email" />
+        </div>
+        <div class="input-DOB input-area">
+          <label for="DOB">Ngày sinh</label>
+          <input type="date" class="input-bar" id="DOB" />
+        </div>
+        <div class="break"></div>
+        <div class="input-password input-area">
+          <label for="password" id="password">Mật khẩu</label>
+          <input type="text" class="input-bar" />
+        </div>
+        <div class="classroon input-area">
+          <label for="classroom">Lớp</label>
+          <select name="classroom" id="class" class="input-bar">
+            <option>---Chọn lớp---</option>
+            <option value="class1" id="class1">Lớp 1</option>
+            <option value="class2" id="class2">Lớp 2</option>
+            <option value="class3" id="class3">Lớp 3</option>
+          </select>
+        </div>
+      </div>
+      <div class="address input-area">
+        <label for="address">Địa chỉ</label>
+        <input type="text" class="input-bar" />
+      </div>
+      <div class="btn">
+        <button type="submit" class="btnSignUp">Đăng ký</button>
+
+        <button type="reset">Hủy</button>
+      </div>
+    </form>
+    <!-- <script src="./ex.js"></script> -->
+    <script>
+      const emailElement = document.getElementById("email");
+      const passwordElement = document.getElementById("password");
+      const btnSignUp = document.getElementById("btnSignUp");
+      const formElement = document.getElementById("form");
+      // btnSignUp.addEventListener("click", (Event) => {
+      // Event.preventDefault();})
+
+      formElement.addEventListener("submit", (Event) => {
+        Event.preventDefault();
+        console.log("Email:", emailElement.value);
+        console.log("Password:", passwordElement.value);
+      });
+    </script>
+  </body>
+</html>
